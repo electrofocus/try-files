@@ -12,7 +12,7 @@ type fileSystem struct {
 	extensions []string
 }
 
-// FileSystem returns and interface that implements nginx try_files-like behavior.
+// FileSystem returns http.FileSystem interface that implements nginx try_files-like behavior.
 // Read more: https://nginx.org/en/docs/http/ngx_http_core_module.html#try_files
 func FileSystem(fs http.FileSystem, extensions ...string) http.FileSystem {
 	return fileSystem{
